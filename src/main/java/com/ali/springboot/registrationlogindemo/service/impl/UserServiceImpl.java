@@ -1,5 +1,6 @@
 package com.ali.springboot.registrationlogindemo.service.impl;
 
+import com.ali.springboot.registrationlogindemo.dto.UserDto;
 import com.ali.springboot.registrationlogindemo.entity.Role;
 import com.ali.springboot.registrationlogindemo.entity.User;
 import com.ali.springboot.registrationlogindemo.repository.RoleRepository;
@@ -24,10 +25,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveUser(UserDto userDto) {
         User user = new User();
-        user.setName(userDto.getFirstName()+" "+userDto.getLastName);
+        user.setName(userDto.getFirstName()+" "+userDto.getLastName());
         user.setEmail(userDto.getEmail());
         // encrypt the password using spring security
-        user.setPassword(passwordEncoder.encode(userDto.password()));
+        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
 
         Role role = roleRepository.findByName("ROLE_ADMIN");
         if(role == null){
