@@ -70,5 +70,9 @@ public class AuthController {
         model.addAttribute("users", users);
         return "users";
     }
-
+    // handler method to handle login request
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
 }
