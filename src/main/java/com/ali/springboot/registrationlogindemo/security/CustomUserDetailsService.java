@@ -1,6 +1,7 @@
 package com.ali.springboot.registrationlogindemo.security;
 
 
+import com.ali.springboot.registrationlogindemo.entity.Role;
 import com.ali.springboot.registrationlogindemo.entity.User;
 import com.ali.springboot.registrationlogindemo.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
