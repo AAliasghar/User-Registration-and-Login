@@ -1,5 +1,5 @@
 -- -----------------------------------------------------
--- Schema Department ------
+-- Schema login_System ------
 -- -----------------------------------------------------
 -- DROP SCHEMA IF EXISTS `login_system_db`;
 
